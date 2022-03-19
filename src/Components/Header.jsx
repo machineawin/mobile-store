@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 const Header = ( {title} ) => {
   return (
@@ -10,6 +11,10 @@ const Header = ( {title} ) => {
 
 Header.defaultProps = {
     title: 'Default Heading'
+}
+
+Header.propTypes = {
+    title: propTypes.string
 }
 
 export default Header
