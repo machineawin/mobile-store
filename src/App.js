@@ -1,12 +1,12 @@
 import './App.css';
-import Header from './Components/Header';
+import MobileStore from './Components/MobileStore';
+import ShoppingCart from './Components/ShoppingCart';
 
 function App() {
   return (
     <div className="App">
-      <Header title = 'Test Header'>
-        
-      </Header>
+      <MobileStore />
+      <ShoppingCart />
     </div>
   );
 }

@@ -1,3 +1,10 @@
+.Mobile-store {
+  min-width: 500 px;
+  border: #282c34;
+  min-height: 500 px;
+  text-align: left;
+}
+
 .App {
   text-align: center;
 }

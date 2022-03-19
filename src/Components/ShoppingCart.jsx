@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './Header'
 
-const MobileStore = () => {
+const ShoppingCart = () => {
   return (
     <div className='container'>
-        <Header title='Mobile Store' />
+        <Header title = 'Shopping Cart' />
     </div>
   )
 }
 
-export default MobileStore
+export default ShoppingCart
