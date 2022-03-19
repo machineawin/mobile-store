@@ -21,3 +21,15 @@ code {
   padding: 10px;
   border-radius: 5px;
 }
+
+.mobile-phone {
+  background-color: blanchedalmond;
+  border: solid 5px;
+  border-color: black;
+  padding: 10px;
+  margin: 10px auto 10px;
+}
+
+.mobile-phone h3 {
+  display: flex;
+}
