@@ -27,7 +27,11 @@ function App() {
 
 //Add to cart
 const addToCart = (id) => {
-  console.log ('id of phone', id)
+  // Duplicate phone object whose ID is passed in
+  const phoneToAdd = phones.filter((phone) => phone.id === id)
+  console.log (phoneToAdd)
+
+  // Render above phone object in ShoppingCart
 }
 
   return (
