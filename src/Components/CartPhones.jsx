@@ -1,7 +1,8 @@
 import React from 'react'
 
-const CartPhones = ( {phones}) => {
-  return (
+const CartPhones = ( {phones} ) => {
+    
+    return (
     phones.map ((phone) => {
         return (
             <div className='mobile-phone' key={phone.id}>
@@ -11,7 +12,7 @@ const CartPhones = ( {phones}) => {
             </div>
         )
     })    
-  )
+    )
 }
 
 export default CartPhones

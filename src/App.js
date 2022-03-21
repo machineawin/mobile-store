@@ -27,13 +27,13 @@ function App() {
 ])
 
 const [cartPhones, setCartPhones] = useState ([
-  {
-    id: 1,
-    brand: 'Samsung',
-    model: 'Galaxy S20',
-    price: 700,
-    count: 1
-},
+//   {
+//     id: 1,
+//     brand: 'Samsung',
+//     model: 'Galaxy S20',
+//     price: 700,
+//     count: 1
+// },
 ])
 
 //Add to cart

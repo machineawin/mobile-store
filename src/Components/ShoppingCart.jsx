@@ -6,7 +6,11 @@ const ShoppingCart = ({ phones }) => {
   return (
     <div className='container'>
         <Header title = 'Shopping Cart' />
-        <CartPhones phones = {phones} />
+        {phones.length >0 ? 
+        (<CartPhones phones = {phones} />) :
+        'Your shopping cart is empty'
+        }
+        
 
     </div>
   )
