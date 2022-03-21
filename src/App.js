@@ -40,10 +40,12 @@ const [cartPhones, setCartPhones] = useState ([
 const addToCart = (id) => {
   // Duplicate phone object whose ID is passed in
   const phoneToAdd = phones.filter((phone) => phone.id === id)
-  console.log (phoneToAdd)
+  const addPhone = {...phoneToAdd[0], count : 1}
+  console.log ('phonetoadd', phoneToAdd)
 
   // Render above phone object in ShoppingCart
-
+  setCartPhones ([...cartPhones, addPhone])
+  console.log ('cartPhones', cartPhones)
 }
 
   return (
