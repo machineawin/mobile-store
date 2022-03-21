@@ -40,12 +40,31 @@ const [cartPhones, setCartPhones] = useState ([
 const addToCart = (id) => {
   // Duplicate phone object whose ID is passed in
   const phoneToAdd = phones.filter((phone) => phone.id === id)
-  const addPhone = {...phoneToAdd[0], count : 1}
-  console.log ('phonetoadd', phoneToAdd)
+
+  // Check if the same phone is already in the shopping cart
+  const index = cartPhones.findIndex (phone => phone.id === id)
+  console.log ('index found', index)
+
+  //Add item if not already present in shopping cart (index = -1)
+  if (index <0) {
+    const addPhone = {...phoneToAdd[0], count : 1}
+    console.log ('addPhone', addPhone)
+    setCartPhones ([...cartPhones, addPhone])
+    console.log ('cartPhones', cartPhones)
+  }
+  //If item is already present in the shopping cart, increment count
+  else {
+    const newCartPhones = [...cartPhones]
+    newCartPhones[index].count++
+    console.log ('incremented count', newCartPhones[index].count)
+    setCartPhones (newCartPhones)
+    console.log ('incremented cartphones', cartPhones)
+  }
+
+  
 
   // Render above phone object in ShoppingCart
-  setCartPhones ([...cartPhones, addPhone])
-  console.log ('cartPhones', cartPhones)
+  
 }
 
   return (
