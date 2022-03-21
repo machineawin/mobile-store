@@ -8,7 +8,9 @@ const CartPhones = ( {phones} ) => {
             <div className='mobile-phone' key={phone.id}>
                 <span>{`${phone.brand} `}</span>
                 <span>{`${phone.model} `}</span>
-                <span>{`- ${phone.price} AUD `}</span>                
+                <span>{`- ${phone.price} AUD `}</span>
+                <div>{`Count - ${phone.count}`}</div>
+                <div>{`Total for line item - ${phone.count*phone.price}`}</div>                
             </div>
         )
     })    
