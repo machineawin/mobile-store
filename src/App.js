@@ -26,15 +26,8 @@ function App() {
     },
 ])
 
-const [cartPhones, setCartPhones] = useState ([
-//   {
-//     id: 1,
-//     brand: 'Samsung',
-//     model: 'Galaxy S20',
-//     price: 700,
-//     count: 1
-// },
-])
+const [cartPhones, setCartPhones] = useState ([])
+const [cartTotal, setCartTotal] = useState (0)
 
 //Add to cart
 const addToCart = (id) => {
@@ -43,34 +36,30 @@ const addToCart = (id) => {
 
   // Check if the same phone is already in the shopping cart
   const index = cartPhones.findIndex (phone => phone.id === id)
-  console.log ('index found', index)
 
   //Add item if not already present in shopping cart (index = -1)
   if (index <0) {
     const addPhone = {...phoneToAdd[0], count : 1}
-    console.log ('addPhone', addPhone)
-    setCartPhones ([...cartPhones, addPhone])
-    console.log ('cartPhones', cartPhones)
+    setCartPhones ([...cartPhones, addPhone])   
   }
   //If item is already present in the shopping cart, increment count
   else {
     const newCartPhones = [...cartPhones]
-    newCartPhones[index].count++
-    console.log ('incremented count', newCartPhones[index].count)
-    setCartPhones (newCartPhones)
-    console.log ('incremented cartphones', cartPhones)
+    newCartPhones[index].count++  
+    setCartPhones (newCartPhones)     
   }
-
-  
-
-  // Render above phone object in ShoppingCart
+  const totalArray = cartPhones.map(phone => phone.price*phone.count)
+  const newTotal = totalArray.reduce((a, b) => a + b, 0)
+  setCartTotal (newTotal)
+  console.log ('cartPhones', cartPhones)
+  console.log ('totalArray, newTotal, cartTotal', totalArray, newTotal, cartTotal) 
   
 }
 
   return (
     <div className="App">
       <MobileStore phones = {phones} onAdd = {addToCart}/>
-      <ShoppingCart phones = {cartPhones}/>
+      <ShoppingCart phones = {cartPhones} total = {cartTotal}/>
     </div>
   );
 }

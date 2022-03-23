@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CartPhones = ( {phones} ) => {
+const CartPhones = ( {phones, total} ) => {
     
     return (
     phones.map ((phone) => {
