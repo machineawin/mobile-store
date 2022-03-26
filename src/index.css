@@ -37,3 +37,8 @@ code {
 .btn {
   cursor: pointer;
 }
+
+.form-control {
+  display: flex;
+  align-items: centers;
+}

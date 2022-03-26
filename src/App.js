@@ -2,6 +2,7 @@ import './App.css';
 import MobileStore from './Components/MobileStore';
 import ShoppingCart from './Components/ShoppingCart';
 import { useState } from 'react';
+import AddPhone from './Components/AddPhone';
 
 function App() {
 
@@ -58,6 +59,7 @@ const addToCart = (id) => {
 
   return (
     <div className="App">
+      <AddPhone/>
       <MobileStore phones = {phones} onAdd = {addToCart}/>
       <ShoppingCart phones = {cartPhones} total = {cartTotal}/>
     </div>
