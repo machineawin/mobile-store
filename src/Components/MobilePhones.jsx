@@ -10,7 +10,7 @@ const MobilePhones = ( {phones, onAdd} ) => {
                   <span>{`${phone.brand} `}</span>
                   <span>{`${phone.model} `}</span>
                   <span>{`- ${phone.price} AUD `}</span>
-                  <button className='btn' onClick={()=>onAdd(phone.id)}>Add to cart</button>
+                  <button onClick={()=>onAdd(phone.id)}>Add to cart</button>
               </div>
           )
       })    

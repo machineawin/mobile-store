@@ -59,7 +59,6 @@ const addToCart = (id) => {
 
   return (
     <div className="App">
-      <AddPhone/>
       <MobileStore phones = {phones} onAdd = {addToCart}/>
       <ShoppingCart phones = {cartPhones} total = {cartTotal}/>
     </div>
